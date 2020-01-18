@@ -41,6 +41,19 @@ const makePaymentIntentHandler = {
             .getResponse();
     }
 };
+const requestHelpIntentHandler = {
+    canHandle(handlerInput) {
+        return Alexa.getRequestType(handlerInput.requestEnvelope) === 'IntentRequest'
+            && Alexa.getIntentName(handlerInput.requestEnvelope) === 'solicitarAyuda';
+    },
+    handle(handlerInput) {
+        const speakOutput = 'Hola, se ha solicitado ayuda';
+        return handlerInput.responseBuilder
+            .speak(speakOutput)
+            //.reprompt('add a reprompt if you want to keep the session open for the user to respond')
+            .getResponse();
+    }
+};
 const HelpIntentHandler = {
     canHandle(handlerInput) {
         return Alexa.getRequestType(handlerInput.requestEnvelope) === 'IntentRequest'
