@@ -44,7 +44,7 @@ const makePaymentIntentHandler = {
 const requestHelpIntentHandler = {
     canHandle(handlerInput) {
         return Alexa.getRequestType(handlerInput.requestEnvelope) === 'IntentRequest'
-            && Alexa.getIntentName(handlerInput.requestEnvelope) === 'solicitarAyuda';
+            && Alexa.getIntentName(handlerInput.requestEnvelope) === 'solicitarCamarero';
     },
     handle(handlerInput) {
         const speakOutput = 'Hola, se ha solicitado ayuda';
