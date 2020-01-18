@@ -21,8 +21,8 @@ const makeRequestIntentHandler = {
             && Alexa.getIntentName(handlerInput.requestEnvelope) === 'solicitarPedido';
     },
     handle(handlerInput) {
-        console.log(request.intent.slots.productAmount.value);
-        console.log(request.intent.slots.productName.value);
+        console.log(handlerInput.request.intent.slots.productAmount.value);
+        console.log(handlerInput.request.intent.slots.productName.value);
         const speakOutput = 'Hola, se va a realizar un pedido';
         return handlerInput.responseBuilder
             .speak(speakOutput)
