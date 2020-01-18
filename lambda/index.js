@@ -22,7 +22,7 @@ const makeRequestIntentHandler = {
     },
     handle(handlerInput) {
         var quantity = handlerInput.requestEnvelope.request.intent.slots.productAmount.value;
-        var product = handlerInput.request.intent.slots.productName.value;
+        var product = handlerInput.requestEnvelope.request.intent.slots.productName.value;
         const speakOutput = 'Se ha solicitado ' + quantity + product;
         return handlerInput.responseBuilder
             .speak(speakOutput)
