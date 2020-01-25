@@ -26,7 +26,7 @@ const makeRequestIntentHandler = {
         const speakOutput = 'Se ha solicitado ' + quantity + product;
         return handlerInput.responseBuilder
             .speak(speakOutput)
-            //.reprompt('add a reprompt if you want to keep the session open for the user to respond')
+            .reprompt('¿Desea añadir algo mas?')
             .getResponse();
     }
 };
@@ -52,7 +52,7 @@ const requestHelpIntentHandler = {
         const speakOutput = 'Hola, se ha solicitado ayuda';
         return handlerInput.responseBuilder
             .speak(speakOutput)
-            .reprompt('¿necesita algún producto mas?')
+            //.reprompt('add a reprompt if you want to keep the session open for the user to respond')
             .getResponse();
     }
 };
