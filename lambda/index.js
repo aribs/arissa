@@ -26,7 +26,7 @@ const makeRequestIntentHandler = {
         const speakOutput = 'Se ha solicitado ' + quantity + product;
         return handlerInput.responseBuilder
             .speak(speakOutput)
-            //.reprompt('¿Desea añadir algo mas?')
+            //.reprompt('add a reprompt if you want to keep the session open for the user to respond')
             .getResponse();
     }
 };
