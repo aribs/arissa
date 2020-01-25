@@ -39,7 +39,7 @@ const makePaymentIntentHandler = {
         const speakOutput = 'Hola, se ha solicitado la cuenta';
         return handlerInput.responseBuilder
             .speak(speakOutput)
-            //.reprompt('add a reprompt if you want to keep the session open for the user to respond')
+            .reprompt('¿Desea algo mas?')
             .getResponse();
     }
 };
